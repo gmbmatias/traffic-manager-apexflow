@@ -1,7 +1,7 @@
-Landing Page – Especialista em Tráfego Pago
+# Landing Page – Especialista em Tráfego Pago
 Este repositório contém o código-fonte de uma landing page de alta conversão voltada para serviços de gestão de tráfego pago, desenvolvida para captar leads, apresentar estratégias de anúncios e converter visitantes em clientes.
 
-📌 Sobre o projeto
+## 📌 Sobre o projeto
 O objetivo desta página é atuar como o principal canal de vendas para um gestor de tráfego, focando em:
 
 Autoridade: Apresentar o profissional e os resultados gerados.
@@ -19,7 +19,7 @@ CSS3 (Flexbox/Grid para responsividade)
 
 JavaScript (Animações de scroll e validação de formulário)
 
-📁 Estrutura do projeto
+## 📁 Estrutura do projeto
 index.html: Estrutura principal da página.
 
 css/: Arquivos de estilização.
@@ -28,10 +28,11 @@ js/: Scripts de interatividade.
 
 assets/: Imagens e ícones utilizados.
 
-🌐 Publicação
+## 🌐 Publicação
 O site está configurado para ser publicado facilmente via GitHub Pages, Vercel ou Netlify.
 
-📄 Status do projeto
-🚀 Finalizado / 🚧 Em desenvolvimento
+## 📄 Status do projeto
+## 🚀 Finalizado / 🚧 Em desenvolvimento
 
 Desenvolvido para fins profissionais e captação de clientes.
+
