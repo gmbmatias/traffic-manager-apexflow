@@ -24,34 +24,46 @@
 
 <body>
 
-    <!-- Header Fixo -->
+    <!-- Header Fixo - Remodeled (Cyber Premium Control) -->
     <header id="header">
+        <div class="header-scan-line"></div>
         <div class="container header-container">
-            <div class="logo">
-                <img src="logo-white.png" alt="APXF Logo">
+            <div class="logo-wrap">
+                <a href="#hero" class="logo">
+                    <img src="logo-white.png" alt="APXF Logo">
+                </a>
             </div>
+
             <nav class="desktop-nav">
                 <a href="#hero" class="nav-link">Início</a>
-                <a href="#como-ajudo" class="nav-link">Serviços</a>
-                <a href="#beneficios" class="nav-link">Método</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#metodo" class="nav-link">Método</a>
                 <a href="#depoimentos" class="nav-link">Cases</a>
             </nav>
-            <a href="#contato" class="btn btn-outline glow-effect">Diagnóstico Gratuito</a>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
+
+            <div class="header-actions">
+                <a href="#contato" class="header-cta-btn">
+                    <span class="pulse-icon"></span>
+                    <span class="btn-txt">Diagnóstico</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile Menu Overlay - Remodeled (Cyber Menu) -->
     <div class="mobile-menu-overlay">
-        <button class="close-menu-btn">&times;</button>
+        <button class="close-menu-btn" aria-label="Fechar Menu">
+            <i class="fas fa-times"></i>
+        </button>
         <nav class="mobile-nav">
-            <a href="#hero">Início</a>
-            <a href="#como-ajudo">Serviços</a>
-            <a href="#beneficios">Método</a>
-            <a href="#depoimentos">Cases</a>
-            <a href="#contato" class="btn btn-primary full-width">Falar com Especialista</a>
+            <a href="#hero">Início_</a>
+            <a href="#servicos">Serviços_</a>
+            <a href="#metodo">Método_</a>
+            <a href="#depoimentos">Cases_</a>
+            <a href="#contato" class="btn btn-primary full-width mt-4">Ativar_Escala</a>
         </nav>
     </div>
 
@@ -161,34 +173,74 @@
         </div>
     </section>
 
-    <!-- Animated Counters Authority -->
-    <section id="autoridade" class="section autoridade">
-        <div class="container">
-            <div class="stats-container">
-                <div class="stat-item reveal-on-scroll">
-                    <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
-                    <div class="stat-info">
-                        <div class="counter" data-target="150">0</div>
-                        <span class="plus">+</span>
-                        <p>Empresas Escaladas</p>
+    <!-- Authority Section - Remodeled & Premium -->
+    <section id="autoridade" class="section autoridade-premium">
+        <div class="container stats-grid">
+            <!-- Stat 1 -->
+            <div class="stat-card reveal-on-scroll">
+                <div class="stat-card-glow"></div>
+                <div class="stat-header">
+                    <div class="stat-icon-wrap">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="stat-live-indicator">
+                        <span class="blink-dot"></span>
+                        DATA_SYNC
                     </div>
                 </div>
-                <div class="divider-vertical"></div>
-                <div class="stat-item reveal-on-scroll delay-1">
-                    <div class="stat-icon"><i class="fas fa-coins"></i></div>
-                    <div class="stat-info">
-                        <div class="counter" data-target="2">0</div>
-                        <span class="plus">M+</span>
-                        <p>Investimento Gerenciado</p>
+                <div class="stat-body">
+                    <div class="counter-wrap">
+                        <span class="counter" data-target="150">0</span><span class="suffix">+</span>
+                    </div>
+                    <div class="stat-label">Empresas Escaladas</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 85%"></div>
                     </div>
                 </div>
-                <div class="divider-vertical"></div>
-                <div class="stat-item reveal-on-scroll delay-2">
-                    <div class="stat-icon"><i class="fas fa-rocket"></i></div>
-                    <div class="stat-info">
-                        <div class="counter" data-target="5">0</div>
-                        <span class="plus">x</span>
-                        <p>ROAS Médio Global</p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="stat-card reveal-on-scroll delay-1">
+                <div class="stat-card-glow"></div>
+                <div class="stat-header">
+                    <div class="stat-icon-wrap">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="stat-live-indicator">
+                        <span class="blink-dot"></span>
+                        LIVE_FEED
+                    </div>
+                </div>
+                <div class="stat-body">
+                    <div class="counter-wrap">
+                        <span class="counter" data-target="2">0</span><span class="suffix">M+</span>
+                    </div>
+                    <div class="stat-label">Investimento Gerenciado</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 92%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="stat-card reveal-on-scroll delay-2">
+                <div class="stat-card-glow"></div>
+                <div class="stat-header">
+                    <div class="stat-icon-wrap">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="stat-live-indicator">
+                        <span class="blink-dot"></span>
+                        MAX_ROAS
+                    </div>
+                </div>
+                <div class="stat-body">
+                    <div class="counter-wrap">
+                        <span class="counter" data-target="5">0</span><span class="suffix">x</span>
+                    </div>
+                    <div class="stat-label">ROAS Médio Global</div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 78%"></div>
                     </div>
                 </div>
             </div>
@@ -197,264 +249,413 @@
 
     <!-- Holographic Services -->
     <section id="como-ajudo" class="section services-section">
+        <div class="services-background-fx">
+            <div class="blob-fx"></div>
+            <div class="grid-fx"></div>
+        </div>
+        <div class="container container-services">
+            <div class="section-header text-center reveal-on-scroll">
+                <span class="service-pre-title">DOMÍNIO DIGITAL</span>
+                <h2 class="service-main-title">Estratégias para <span class="gradient-text-alt">Dominar seu
+                        Mercado</span></h2>
+            </div>
+
+            <div class="services-modern-grid">
+                <!-- Google Card -->
+                <div class="service-card-luxury google-luxury reveal-on-scroll">
+                    <div class="card-glass-canvas"></div>
+                    <div class="card-scan-line"></div>
+                    <div class="card-interior">
+                        <div class="card-top">
+                            <div class="brand-icon"><i class="fab fa-google"></i></div>
+                            <div class="service-status">ACTIVE_INTENT</div>
+                        </div>
+                        <h3>Google Ads <br><small>Fundo de Funil</small></h3>
+                        <p>Capturamos a intenção exata de compra. Posicionamos sua marca onde o dinheiro já está
+                            circulando.</p>
+                        <ul class="luxury-list">
+                            <li><span>Rede de Pesquisa & Intent</span></li>
+                            <li><span>Performance Max & YouTube</span></li>
+                            <li><span>Remarketing Preditivo</span></li>
+                        </ul>
+                    </div>
+                    <div class="card-corner-decor"></div>
+                </div>
+
+                <!-- Meta Card -->
+                <div class="service-card-luxury meta-luxury reveal-on-scroll delay-1">
+                    <div class="card-glass-canvas"></div>
+                    <div class="card-scan-line"></div>
+                    <div class="card-interior">
+                        <div class="card-top">
+                            <div class="brand-icon"><i class="fab fa-meta"></i></div>
+                            <div class="service-status">HYPER_SCALE</div>
+                        </div>
+                        <h3>Meta Ads <br><small>Geração de Desejo</small></h3>
+                        <p>Despertamos o desejo no público frio. Criamos uma máquina de escala baseada em atenção.</p>
+                        <ul class="luxury-list">
+                            <li><span>Criativos de Alta Retenção</span></li>
+                            <li><span>Targeting por Comportamento</span></li>
+                            <li><span>Funis de Escala Vertical</span></li>
+                        </ul>
+                    </div>
+                    <div class="card-corner-decor"></div>
+                </div>
+
+                <!-- Data Card -->
+                <div class="service-card-luxury data-luxury reveal-on-scroll delay-2">
+                    <div class="card-glass-canvas"></div>
+                    <div class="card-scan-line"></div>
+                    <div class="card-interior">
+                        <div class="card-top">
+                            <div class="brand-icon"><i class="fas fa-microchip"></i></div>
+                            <div class="service-status">DATA_INTELLIGENCE</div>
+                        </div>
+                        <h3>Tracking & IA <br><small>Inteligência de Dados</small></h3>
+                        <p>O que não é medido, é perdido. Implementamos a ciência por trás de cada centavo investido.
+                        </p>
+                        <ul class="luxury-list">
+                            <li><span>GA4 & Server Side Tracking</span></li>
+                            <li><span>API de Conversão (CAPI)</span></li>
+                            <li><span>Dashboards de ROI Real</span></li>
+                        </ul>
+                    </div>
+                    <div class="card-corner-decor"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section - Remodeled (Creative Cyber-Engine) -->
+    <section id="metodo" class="section method-premium">
+        <div class="method-glow-bg"></div>
+        <div class="container">
+            <div class="method-grid">
+                <div class="method-text-side reveal-on-scroll">
+                    <span class="method-tag">O ENGINE DE ESCALA</span>
+                    <h2 class="method-title">Tráfego sem Segredos. <br><span class="accent-text">Apenas Processos de
+                            Engenhosidade.</span></h2>
+
+                    <div class="method-modules">
+                        <!-- Module 1 -->
+                        <div class="module-item active" data-step="1">
+                            <div class="module-line"></div>
+                            <div class="module-icon"><i class="fas fa-microchip"></i></div>
+                            <div class="module-info">
+                                <h3>Diagnóstico & Setup</h3>
+                                <p>Varredura completa de tracking e alinhamento estratégico de KPIs.</p>
+                            </div>
+                            <span class="module-num">01</span>
+                        </div>
+
+                        <!-- Module 2 -->
+                        <div class="module-item" data-step="2">
+                            <div class="module-line"></div>
+                            <div class="module-icon"><i class="fas fa-vial"></i></div>
+                            <div class="module-info">
+                                <h3>Validação de Oferta</h3>
+                                <p>Engenharia reversa de criativos para encontrar o ângulo de conversão mestre.</p>
+                            </div>
+                            <span class="module-num">02</span>
+                        </div>
+
+                        <!-- Module 3 -->
+                        <div class="module-item" data-step="3">
+                            <div class="module-line"></div>
+                            <div class="module-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="module-info">
+                                <h3>Escala & Otimização</h3>
+                                <p>Expansão volumétrica de dados mantendo a estabilidade do faturamento.</p>
+                            </div>
+                            <span class="module-num">03</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method-visual-side reveal-on-scroll delay-2">
+                    <div class="cyber-engine-wrap">
+                        <div class="engine-core">
+                            <div class="core-inner">
+                                <i class="fas fa-atom fa-spin-slow"></i>
+                            </div>
+                            <div class="core-pulse"></div>
+                            <div class="core-rings">
+                                <div class="ring-data"></div>
+                                <div class="ring-data"></div>
+                                <div class="ring-data"></div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Nodes -->
+                        <div class="engine-node node-google float-slow">
+                            <i class="fab fa-google"></i>
+                            <span class="node-tag">GOOGLE</span>
+                        </div>
+                        <div class="engine-node node-meta float-medium">
+                            <i class="fab fa-meta"></i>
+                            <span class="node-tag">META</span>
+                        </div>
+                        <div class="engine-node node-analytics float-fast">
+                            <i class="fas fa-chart-network"></i>
+                            <span class="node-tag">DATA</span>
+                        </div>
+
+                        <!-- Connection Lines SVG -->
+                        <svg class="connection-svg" viewBox="0 0 400 400">
+                            <path class="draw-path" d="M200,200 L50,100" />
+                            <path class="draw-path" d="M200,200 L350,150" />
+                            <path class="draw-path" d="M200,200 L150,350" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Niches Section - Remodeled (Creative Cyber Panels) -->
+    <section id="nichos" class="section niches-premium">
+        <div class="niches-visual-bg"></div>
         <div class="container">
             <div class="section-header text-center reveal-on-scroll">
-                <span class="section-tag">O QUE FAZEMOS</span>
-                <h2>Estratégias para Dominar seu Mercado</h2>
+                <span class="niche-tag-top">VERTICAIS DE ATUAÇÃO</span>
+                <h2 class="niche-main-title">Quem Nós <span class="text-glow">Aceleramos</span></h2>
             </div>
 
-            <div class="services-wrapper">
-                <div class="service-tile google-tile reveal-on-scroll">
-                    <div class="tile-content">
-                        <div class="tile-icon"><i class="fab fa-google"></i></div>
-                        <h3>Google Ads (Intent)</h3>
-                        <p>Capturamos quem já está procurando pelo seu produto. O fundo de funil mais qualificado da
-                            internet.</p>
-                        <ul class="tile-list">
-                            <li><i class="fas fa-check"></i> Rede de Pesquisa</li>
-                            <li><i class="fas fa-check"></i> Shopping & YouTube</li>
-                            <li><i class="fas fa-check"></i> Remarketing Dinâmico</li>
-                        </ul>
-                    </div>
-                    <div class="tile-glow"></div>
-                </div>
-
-                <div class="service-tile meta-tile reveal-on-scroll delay-1">
-                    <div class="tile-content">
-                        <div class="tile-icon"><i class="fab fa-facebook-f"></i></div>
-                        <h3>Meta Ads (Attention)</h3>
-                        <p>Geramos desejo e descoberta. Encontramos seu cliente ideal baseado em comportamento e
-                            interesses.</p>
-                        <ul class="tile-list">
-                            <li><i class="fas fa-check"></i> Criativos de Alta Conversão</li>
-                            <li><i class="fas fa-check"></i> Estratégia de Funil Completo</li>
-                            <li><i class="fas fa-check"></i> Escala Horizontal e Vertical</li>
-                        </ul>
-                    </div>
-                    <div class="tile-glow"></div>
-                </div>
-
-                <div class="service-tile tracking-tile reveal-on-scroll delay-2">
-                    <div class="tile-content">
-                        <div class="tile-icon"><i class="fas fa-chart-pie"></i></div>
-                        <h3>Tracking & Analytics</h3>
-                        <p>O que não é medido não é gerenciado. Implementamos toda a inteligência de dados do seu
-                            projeto.</p>
-                        <ul class="tile-list">
-                            <li><i class="fas fa-check"></i> GA4 & GTM Avançado</li>
-                            <li><i class="fas fa-check"></i> API de Conversão</li>
-                            <li><i class="fas fa-check"></i> Dashboards em Tempo Real</li>
-                        </ul>
-                    </div>
-                    <div class="tile-glow"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Animated Benefits (The Method) -->
-    <section id="beneficios" class="section method-section">
-        <div class="method-bg"></div>
-        <div class="container">
-            <div class="method-layout">
-                <div class="method-text reveal-on-scroll">
-                    <span class="section-tag">NOSSO MÉTODO</span>
-                    <h2>Tráfego sem Segredos.<br>Apenas Processos.</h2>
-                    <p>Não dependemos de "hacks" ou sorte. Utilizamos um framework proprietário de otimização contínua.
-                    </p>
-
-                    <div class="process-steps">
-                        <div class="step-item">
-                            <div class="step-number">01</div>
-                            <div class="step-desc">
-                                <strong>Diagnóstico & Setup</strong>
-                                <span>Análise profunda do cenário atual e correção de tracking.</span>
-                            </div>
+            <div class="niches-cards-wrap">
+                <!-- Niche 1 -->
+                <div class="niche-card-panel reveal-on-scroll">
+                    <div class="panel-bg local-bg"></div>
+                    <div class="panel-overlay"></div>
+                    <div class="panel-content">
+                        <div class="panel-icon-box">
+                            <i class="fas fa-store"></i>
+                            <div class="icon-ring"></div>
                         </div>
-                        <div class="step-item">
-                            <div class="step-number">02</div>
-                            <div class="step-desc">
-                                <strong>Validação de Oferta</strong>
-                                <span>Testes rápidos de criativos e públicos para encontrar o "ganhador".</span>
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <div class="step-number">03</div>
-                            <div class="step-desc">
-                                <strong>Escala & Otimização</strong>
-                                <span>Aumento gradativo de verba mantendo o ROI saudável.</span>
-                            </div>
+                        <div class="panel-text">
+                            <h3>Negócios Locais</h3>
+                            <div class="panel-line"></div>
+                            <p>Transformamos cliques em agendamentos reais para Clínicas, Escritórios e Delivery.</p>
+                            <span class="panel-stat">DRIVING_REVENUE</span>
                         </div>
                     </div>
+                    <div class="panel-scan-line"></div>
                 </div>
-                <div class="method-visual reveal-on-scroll delay-2">
-                    <div class="orbit-system">
-                        <div class="orbit-center"><i class="fas fa-bullseye"></i></div>
-                        <div class="orbit-ring ring-1"></div>
-                        <div class="orbit-ring ring-2"></div>
-                        <div class="orbit-item item-1"><i class="fab fa-google"></i></div>
-                        <div class="orbit-item item-2"><i class="fab fa-instagram"></i></div>
-                        <div class="orbit-item item-3"><i class="fas fa-database"></i></div>
+
+                <!-- Niche 2 -->
+                <div class="niche-card-panel reveal-on-scroll delay-1">
+                    <div class="panel-bg ecommerce-bg"></div>
+                    <div class="panel-overlay"></div>
+                    <div class="panel-content">
+                        <div class="panel-icon-box">
+                            <i class="fas fa-shopping-bag"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <div class="panel-text">
+                            <h3>E-commerce</h3>
+                            <div class="panel-line"></div>
+                            <p>Escala de vendas e ROAS agressivo para marcas de Moda, Eletrônicos e Suplementos.</p>
+                            <span class="panel-stat">SCALING_SALES</span>
+                        </div>
                     </div>
+                    <div class="panel-scan-line"></div>
+                </div>
+
+                <!-- Niche 3 -->
+                <div class="niche-card-panel reveal-on-scroll delay-2">
+                    <div class="panel-bg infoprod-bg"></div>
+                    <div class="panel-overlay"></div>
+                    <div class="panel-content">
+                        <div class="panel-icon-box">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <div class="panel-text">
+                            <h3>Infoprodutos</h3>
+                            <div class="panel-line"></div>
+                            <p>Estratégias de lançamento e perpetuo com foco em ROI astronômico.</p>
+                            <span class="panel-stat">MAX_CONVERSION</span>
+                        </div>
+                    </div>
+                    <div class="panel-scan-line"></div>
+                </div>
+
+                <!-- Niche 4 -->
+                <div class="niche-card-panel reveal-on-scroll delay-3">
+                    <div class="panel-bg service-bg"></div>
+                    <div class="panel-overlay"></div>
+                    <div class="panel-content">
+                        <div class="panel-icon-box">
+                            <i class="fas fa-handshake"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <div class="panel-text">
+                            <h3>B2B & SaaS</h3>
+                            <div class="panel-line"></div>
+                            <p>Geração de MQLs e SQLs qualificados para Consultores e Empresas de Tecnologia.</p>
+                            <span class="panel-stat">LEAD_GEN_MASTER</span>
+                        </div>
+                    </div>
+                    <div class="panel-scan-line"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Focus Grid Niches -->
-    <section id="nichos" class="section niches-section">
-        <div class="container">
+    <!-- Testimonials Section - Remodeled (Cyber Social Proof) -->
+    <section id="depoimentos" class="section testimonials-premium">
+        <div class="testimonials-glow"></div>
+        <div class="container container-wide">
             <div class="section-header text-center reveal-on-scroll">
-                <span class="section-tag">ESPECIALIDADES</span>
-                <h2>Quem Nós Aceleramos</h2>
+                <span class="proof-tag">PROVA SOCIAL CERTIFICADA</span>
+                <h2 class="proof-title">Resultados que <span class="gradient-text">Falam por Si</span></h2>
             </div>
 
-            <div class="niches-focus-grid">
-                <div class="niche-box reveal-on-scroll">
-                    <div class="niche-bg local-bg"></div>
-                    <div class="niche-content">
-                        <i class="fas fa-store"></i>
-                        <h3>Negócios Locais</h3>
-                        <p>Clínicas, Escritórios, Delivery</p>
-                    </div>
-                </div>
-                <div class="niche-box reveal-on-scroll delay-1">
-                    <div class="niche-bg ecommerce-bg"></div>
-                    <div class="niche-content">
-                        <i class="fas fa-shopping-bag"></i>
-                        <h3>E-commerce</h3>
-                        <p>Moda, Eletrônicos, Suplementos</p>
-                    </div>
-                </div>
-                <div class="niche-box reveal-on-scroll delay-2">
-                    <div class="niche-bg infoprod-bg"></div>
-                    <div class="niche-content">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Infoprodutores</h3>
-                        <p>Lançamentos e Perpétuo</p>
-                    </div>
-                </div>
-                <div class="niche-box reveal-on-scroll delay-3">
-                    <div class="niche-bg service-bg"></div>
-                    <div class="niche-content">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Prestadores de Serviço</h3>
-                        <p>Consultores, B2B, SaaS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="testimonials-wall">
+                <div class="marquee-wrapper">
+                    <div class="marquee-track">
+                        <!-- Card 1 -->
+                        <div class="t-card">
+                            <div class="card-status"><i class="fas fa-check-circle"></i> VERIFIED_ROI</div>
+                            <div class="card-quote"><i class="fas fa-quote-left"></i></div>
+                            <p>"Dobrei meu faturamento em 3 meses. O nível de clareza nos dados é absurdo."</p>
+                            <div class="card-results">
+                                <span class="res-num">+120%</span>
+                                <span class="res-label">Sales Increase</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="client-avatar">RS</div>
+                                <div class="client-meta">
+                                    <strong>Ricardo Silva</strong>
+                                    <span>Diretor Comercial</span>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Prova Social -->
-    <section id="depoimentos" class="section bg-light">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>O Que Dizem Meus Clientes</h2>
-            </div>
-            <div class="testimonials-slider">
-                <div class="testimonials-track">
-                    <!-- Set 1 -->
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"Em poucos meses conseguimos dobrar nosso faturamento com as
-                            campanhas. O trabalho é extremamente profissional e transparente."</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Ricardo Silva</strong>
-                            <span>Diretor Comercial</span>
+                        <!-- Card 2 -->
+                        <div class="t-card">
+                            <div class="card-status"><i class="fas fa-check-circle"></i> VERIFIED_ROI</div>
+                            <div class="card-quote"><i class="fas fa-quote-left"></i></div>
+                            <p>"Finalmente uma gestão que entende de escala e não só de apertar botão."</p>
+                            <div class="card-results">
+                                <span class="res-num">4.5x</span>
+                                <span class="res-label">ROAS Médio</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="client-avatar">AM</div>
+                                <div class="client-meta">
+                                    <strong>Ana Martins</strong>
+                                    <span>Clínica de Estética</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"Antes tentávamos fazer anúncios sozinhos e só gastávamos dinheiro.
-                            Agora temos leads qualificados chegando todo dia."</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Ana Martins</strong>
-                            <span>Clínica de Estética</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"Equipe muito atenta e proativa. O ROI das nossas campanhas nunca
-                            foi tão alto. Super recomendo!"</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Carlos Eduardo</strong>
-                            <span>E-commerce de Moda</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"A clareza nos relatórios me deixa segura de que o investimento está
-                            valendo a pena. Trabalho impecável."</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Mariana Souza</strong>
-                            <span>Arquiteta</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"Melhor parceiro de tráfego que já tivemos. Escalaram nossa operação
-                            de dropshipping em tempo recorde."</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Felipe Costa</strong>
-                            <span>Empreendedor Digital</span>
-                        </div>
-                    </div>
 
-                    <!-- Set 2 (Duplicate) -->
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"Em poucos meses conseguimos dobrar nosso faturamento com as
-                            campanhas. O trabalho é extremamente profissional e transparente."</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Ricardo Silva</strong>
-                            <span>Diretor Comercial</span>
+                        <!-- Card 3 -->
+                        <div class="t-card">
+                            <div class="card-status"><i class="fas fa-check-circle"></i> VERIFIED_ROI</div>
+                            <div class="card-quote"><i class="fas fa-quote-left"></i></div>
+                            <p>"Leads qualificados chegando todo santo dia. Atendimento impecável."</p>
+                            <div class="card-results">
+                                <span class="res-num">-40%</span>
+                                <span class="res-label">Lead Cost</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="client-avatar">CE</div>
+                                <div class="client-meta">
+                                    <strong>Carlos Eduardo</strong>
+                                    <span>E-commerce</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"Antes tentávamos fazer anúncios sozinhos e só gastávamos dinheiro.
-                            Agora temos leads qualificados chegando todo dia."</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Ana Martins</strong>
-                            <span>Clínica de Estética</span>
+
+                        <!-- Card 4 -->
+                        <div class="t-card">
+                            <div class="card-status"><i class="fas fa-check-circle"></i> VERIFIED_ROI</div>
+                            <div class="card-quote"><i class="fas fa-quote-left"></i></div>
+                            <p>"A segurança que eu precisava para investir pesado em tráfego pago."</p>
+                            <div class="card-results">
+                                <span class="res-num">R$ 500k</span>
+                                <span class="res-label">Escala Alcançada</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="client-avatar">MS</div>
+                                <div class="client-meta">
+                                    <strong>Mariana Souza</strong>
+                                    <span>Arquiteta</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"Equipe muito atenta e proativa. O ROI das nossas campanhas nunca
-                            foi tão alto. Super recomendo!"</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Carlos Eduardo</strong>
-                            <span>E-commerce de Moda</span>
+
+                        <!-- Card 5 -->
+                        <div class="t-card">
+                            <div class="card-status"><i class="fas fa-check-circle"></i> VERIFIED_ROI</div>
+                            <div class="card-quote"><i class="fas fa-quote-left"></i></div>
+                            <p>"O ROI mais alto que já tivemos em 4 anos de operação digital."</p>
+                            <div class="card-results">
+                                <span class="res-num">12.8x</span>
+                                <span class="res-label">MAX_ROI</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="client-avatar">FC</div>
+                                <div class="client-meta">
+                                    <strong>Felipe Costa</strong>
+                                    <span>Infoprodutor</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"A clareza nos relatórios me deixa segura de que o investimento está
-                            valendo a pena. Trabalho impecável."</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Mariana Souza</strong>
-                            <span>Arquiteta</span>
+
+                        <!-- DUPLICATE FOR INFINITE LOOP -->
+                        <!-- Card 1 -->
+                        <div class="t-card">
+                            <div class="card-status"><i class="fas fa-check-circle"></i> VERIFIED_ROI</div>
+                            <div class="card-quote"><i class="fas fa-quote-left"></i></div>
+                            <p>"Dobrei meu faturamento em 3 meses. O nível de clareza nos dados é absurdo."</p>
+                            <div class="card-results">
+                                <span class="res-num">+120%</span>
+                                <span class="res-label">Sales Increase</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="client-avatar">RS</div>
+                                <div class="client-meta">
+                                    <strong>Ricardo Silva</strong>
+                                    <span>Diretor Comercial</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="testimonial-text">"Melhor parceiro de tráfego que já tivemos. Escalaram nossa operação
-                            de dropshipping em tempo recorde."</p>
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <div class="client-info">
-                            <strong>Felipe Costa</strong>
-                            <span>Empreendedor Digital</span>
+
+                        <!-- Card 2 -->
+                        <div class="t-card">
+                            <div class="card-status"><i class="fas fa-check-circle"></i> VERIFIED_ROI</div>
+                            <div class="card-quote"><i class="fas fa-quote-left"></i></div>
+                            <p>"Finalmente uma gestão que entende de escala e não só de apertar botão."</p>
+                            <div class="card-results">
+                                <span class="res-num">4.5x</span>
+                                <span class="res-label">ROAS Médio</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="client-avatar">AM</div>
+                                <div class="client-meta">
+                                    <strong>Ana Martins</strong>
+                                    <span>Clínica de Estética</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="t-card">
+                            <div class="card-status"><i class="fas fa-check-circle"></i> VERIFIED_ROI</div>
+                            <div class="card-quote"><i class="fas fa-quote-left"></i></div>
+                            <p>"Leads qualificados chegando todo santo dia. Atendimento impecável."</p>
+                            <div class="card-results">
+                                <span class="res-num">-40%</span>
+                                <span class="res-label">Lead Cost</span>
+                            </div>
+                            <div class="card-footer">
+                                <div class="client-avatar">CE</div>
+                                <div class="client-meta">
+                                    <strong>Carlos Eduardo</strong>
+                                    <span>E-commerce</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -464,47 +665,73 @@
 
     <!-- CTA & Contact Section -->
     <!-- Creative Bento Contact Section -->
-    <section id="contato" class="section contact-section">
+    <!-- Contact Section - Remodeled (Cyber Bento Connection) -->
+    <section id="contato" class="section contact-premium">
+        <div class="contact-visual-fx">
+            <div class="glow-orb"></div>
+            <div class="cyber-grid-overlay"></div>
+        </div>
         <div class="container">
-            <div class="bento-grid">
-                <!-- Main Call to Action Block -->
-                <div class="bento-item main-cta reveal-on-scroll">
-                    <div class="content-wrapper">
-                        <span class="status-badge"><span class="pulse-dot"></span> Disponível para novos projetos</span>
-                        <h2 class="bento-title">Sua empresa no<br>próximo nível.</h2>
-                        <p class="bento-text">Não perca mais tempo tentando adivinhar. Tenha uma estratégia de tráfego
-                            validada e lucrativa rodando no seu negócio.</p>
+            <div class="bento-conn-grid">
+                <!-- Main Master CTA -->
+                <div class="bento-node master-node reveal-on-scroll">
+                    <div class="node-glitch-bg"></div>
+                    <div class="node-content">
+                        <div class="availability-tag">
+                            <span class="pulse-ring"></span>
+                            <span class="status-txt">SYSTEM_ONLINE: READY_FOR_SCALE</span>
+                        </div>
+                        <h2 class="node-title">Pronto para o <br><span class="text-accent">Próximo Nível?</span></h2>
+                        <p class="node-desc">Sua empresa merece uma estratégia que não dorme. Vamos construir sua
+                            máquina de lucro agora.</p>
+
+                        <div class="node-footer">
+                            <div class="trusted-indicator">
+                                <i class="fas fa-shield-check"></i>
+                                <span>SECURE CONNECTION</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-pattern"></div>
                 </div>
 
-                <!-- WhatsApp Block -->
+                <!-- WhatsApp Node -->
                 <a href="https://wa.me/5522998305606" target="_blank"
-                    class="bento-item whatsapp-box reveal-on-scroll delay-1">
-                    <div class="icon-holder">
-                        <i class="fab fa-whatsapp"></i>
+                    class="bento-node social-node whatsapp-node reveal-on-scroll delay-1">
+                    <div class="node-overlay"></div>
+                    <div class="node-main">
+                        <div class="node-icon-wrap">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="node-info">
+                            <h3>Direct WhatsApp</h3>
+                            <p>Real-time Response</p>
+                        </div>
                     </div>
-                    <div class="box-text">
-                        <h3>WhatsApp</h3>
-                        <p>Resposta rápida</p>
+                    <div class="node-action">
+                        <i class="fas fa-chevron-right"></i>
                     </div>
-                    <div class="arrow-icon">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
+                    <div class="node-scan"></div>
                 </a>
 
-                <!-- Email Block -->
-                <a href="mailto:apexflowads@gmail.com" class="bento-item email-box reveal-on-scroll delay-2">
-                    <div class="icon-holder">
-                        <i class="far fa-envelope"></i>
+                <!-- Email Node -->
+                <a href="mailto:apexflowads@gmail.com"
+                    class="bento-node social-node email-node reveal-on-scroll delay-2">
+                    <div class="node-overlay"></div>
+                    <div class="node-main">
+                        <div class="node-icon-wrap">
+                            <i class="far fa-envelope"></i>
+                            <div class="icon-glow"></div>
+                        </div>
+                        <div class="node-info">
+                            <h3>Corporate Email</h3>
+                            <p>Formal Proposal</p>
+                        </div>
                     </div>
-                    <div class="box-text">
-                        <h3>Email</h3>
-                        <p>Proposta formal</p>
+                    <div class="node-action">
+                        <i class="fas fa-chevron-right"></i>
                     </div>
-                    <div class="arrow-icon">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
+                    <div class="node-scan"></div>
                 </a>
             </div>
         </div>
@@ -513,68 +740,89 @@
     <!-- Footer -->
     <!-- Footer Remodeled -->
     <!-- Footer Minimalist CTA -->
-    <!-- Footer - Premium Creative -->
+    <!-- Footer - Remodeled (Hyper-Engine Activation) -->
     <footer class="footer-premium">
-        <div class="container">
-            <div class="footer-cta-box reveal-on-scroll">
-                <div class="cta-content">
-                    <span class="cta-tag">VAMOS ESCALAR?</span>
-                    <h2>Pronto para<br>dominar o mercado?</h2>
-                    <p>Sua próxima grande escala começa com um diagnóstico gratuito. Não perca tempo com estratégias que
-                        não funcionam.</p>
-                </div>
-                <div class="cta-action">
-                    <a href="https://wa.me/5522998305606" target="_blank" class="footer-glow-btn">
-                        <span class="btn-text">Começar Agora</span>
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="footer-visual-bg">
+            <div class="visual-line line-1"></div>
+            <div class="visual-line line-2"></div>
+            <div class="visual-orb"></div>
+        </div>
 
-            <div class="footer-main-grid">
-                <div class="footer-info reveal-on-scroll delay-1">
-                    <div class="footer-brand-logo">
-                        APXF<span class="accent-dot">.</span>
+        <div class="container container-footer">
+            <!-- Final Decision CTA -->
+            <div class="hyper-footer-cta reveal-on-scroll">
+                <div class="cta-glitch-bg"></div>
+                <div class="cta-inner">
+                    <div class="cta-text-side">
+                        <span class="cta-mini-tag">SYSTEM_ACTIVATION</span>
+                        <h2 class="cta-final-title">Pronto para Dominar o <span class="highlight">Mercado?</span></h2>
+                        <p class="cta-final-desc">A próxima fase da sua empresa começa aqui. Ative seu motor de
+                            crescimento agora mesmo.</p>
                     </div>
-                    <p class="brand-tagline">Transformando dados em lucro real através de tráfego de alta performance.
-                    </p>
-                    <div class="footer-social-wrap">
-                        <a href="https://instagram.com" target="_blank" class="social-link-item"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/5522998305606" target="_blank" class="social-link-item"><i
-                                class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:apexflowads@gmail.com" class="social-link-item"><i
-                                class="far fa-envelope"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-links-group reveal-on-scroll delay-2">
-                    <div class="link-col">
-                        <h4>Explore</h4>
-                        <ul>
-                            <li><a href="#hero">Início</a></li>
-                            <li><a href="#servicos">Serviços</a></li>
-                            <li><a href="#metodo">Método</a></li>
-                            <li><a href="#depoimentos">Cases</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-col">
-                        <h4>Especialidades</h4>
-                        <ul>
-                            <li><a href="#nichos">Local</a></li>
-                            <li><a href="#nichos">E-commerce</a></li>
-                            <li><a href="#nichos">Infoprodutos</a></li>
-                            <li><a href="#nichos">Serviços</a></li>
-                        </ul>
+                    <div class="cta-button-side">
+                        <a href="https://wa.me/5522998305606" target="_blank" class="engine-trigger-btn">
+                            <span class="btn-charge"></span>
+                            <span class="btn-label">Iniciar Escala <i class="fas fa-bolt"></i></span>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-legal">
-                <p>&copy; 2026 APXF Gestão de Tráfego. Built with Precision.</p>
-                <div class="legal-links">
-                    <a href="#">Privacidade</a>
-                    <a href="#">Termos</a>
+            <!-- Footer Main Content -->
+            <div class="footer-core-grid">
+                <div class="footer-brand-section reveal-on-scroll">
+                    <div class="brand-wrap">
+                        <h2 class="f-logo">APXF<span class="f-dot"></span></h2>
+                        <div class="f-logo-line"></div>
+                    </div>
+                    <p class="f-tagline">Engineered for High-Performance Growth through Data-Driven Paid Traffic.</p>
+                    <div class="social-magnetic-wrap">
+                        <a href="#" class="social-mag-btn" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span class="mag-bg"></span>
+                        </a>
+                        <a href="#" class="social-mag-btn" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="mag-bg"></span>
+                        </a>
+                        <a href="#" class="social-mag-btn" aria-label="Email">
+                            <i class="far fa-envelope"></i>
+                            <span class="mag-bg"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-nav-section reveal-on-scroll delay-1">
+                    <div class="nav-col">
+                        <h4 class="nav-title">Navegação</h4>
+                        <ul class="nav-links">
+                            <li><a href="#hero">Alpha_Phase</a></li>
+                            <li><a href="#servicos">Core_Services</a></li>
+                            <li><a href="#metodo">The_Engine</a></li>
+                            <li><a href="#depoimentos">Success_Logs</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-col">
+                        <h4 class="nav-title">Sistemas</h4>
+                        <ul class="nav-links">
+                            <li><a href="#nichos">Local_Target</a></li>
+                            <li><a href="#nichos">E-com_Scale</a></li>
+                            <li><a href="#nichos">Info_Launch</a></li>
+                            <li><a href="#nichos">B2B_SaaS</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Bottom -->
+            <div class="footer-bottom">
+                <div class="f-separator"></div>
+                <div class="bottom-flex">
+                    <p class="copyright">&copy; 2026 APXF_FLOW. All systems operational.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacidade_Doc</a>
+                        <a href="#">Termos_de_Uso</a>
+                    </div>
                 </div>
             </div>
         </div>

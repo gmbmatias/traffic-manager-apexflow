@@ -1,4 +1,3 @@
-// Keep existing code...
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -13,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', toggleMenu);
-        closeMenuBtn.addEventListener('click', toggleMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', toggleMenu);
@@ -27,16 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Header Scroll Effect - Dark Theme
+    // Header Scroll Effect - Remodeled
     const header = document.querySelector('header');
-
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
-            header.style.backgroundColor = 'rgba(13, 13, 13, 0.98)';
+        if (window.scrollY > 40) {
+            header.classList.add('scrolled');
         } else {
-            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
-            header.style.backgroundColor = '#0d0d0d';
+            header.classList.remove('scrolled');
         }
     });
 
@@ -59,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     revealElements.forEach(el => {
-        // Pause CSS animations initially if they exist
         if (getComputedStyle(el).animationName !== 'none') {
             el.style.animationPlayState = 'paused';
         }
@@ -94,9 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     counters.forEach(counter => counterObserver.observe(counter));
 
-    // Testimonials Carousel - handled by CSS
-    // JS removed as requested for CSS-only infinite scroll
-
     // Hero Parallax Effect
     const hero = document.getElementById('hero');
     if (hero) {
@@ -114,26 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Form Submission (Updated for removed form, keeping just incase user adds it back or other forms exist)
-    const contactForm = document.querySelector('.contact-form');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            // Simulate sending
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerText;
-
-            btn.innerText = 'Enviando...';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                alert('Obrigado! Sua solicitação foi recebida. Entrarei em contato em breve.');
-                contactForm.reset();
-                btn.innerText = originalText;
-                btn.disabled = false;
-            }, 1500);
+    // Stat Cards Glow Effect
+    const statCards = document.querySelectorAll('.stat-card');
+    statCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / card.clientWidth) * 100;
+            const y = ((e.clientY - rect.top) / card.clientHeight) * 100;
+            card.style.setProperty('--mouse-x', `${x}%`);
+            card.style.setProperty('--mouse-y', `${y}%`);
         });
-    }
+    });
 });
