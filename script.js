@@ -40,13 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Scroll Animations (Intersection Observer)
-    const fadeElements = document.querySelectorAll('.fade-in, .fade-in-up');
-
-    // Reset animations initially
-    fadeElements.forEach(el => {
-        el.style.animationPlayState = 'paused';
-    });
+    // Scroll Animations & Counters
+    const revealElements = document.querySelectorAll('.fade-in, .fade-in-up, .reveal-on-scroll');
 
     const observerOptions = {
         threshold: 0.1,
@@ -57,17 +52,67 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.animationPlayState = 'running';
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    fadeElements.forEach(el => {
+    revealElements.forEach(el => {
+        // Pause CSS animations initially if they exist
+        if (getComputedStyle(el).animationName !== 'none') {
+            el.style.animationPlayState = 'paused';
+        }
         observer.observe(el);
     });
 
+    // Number Counters
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000; // ms
+                const increment = target / (duration / 16); // ~60fps
+
+                let current = 0;
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCounter();
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+
     // Testimonials Carousel - handled by CSS
     // JS removed as requested for CSS-only infinite scroll
+
+    // Hero Parallax Effect
+    const hero = document.getElementById('hero');
+    if (hero) {
+        hero.addEventListener('mousemove', (e) => {
+            const visual = hero.querySelector('.hero-main-visual');
+            const text = hero.querySelector('.hero-text-wrapper');
+
+            if (visual && text) {
+                const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+                const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+
+                visual.style.transform = `translate(${moveX * 1.5}px, ${moveY * 1.5}px)`;
+                text.style.transform = `translate(${moveX * -0.5}px, ${moveY * -0.5}px)`;
+            }
+        });
+    }
 
     // Form Submission (Updated for removed form, keeping just incase user adds it back or other forms exist)
     const contactForm = document.querySelector('.contact-form');
