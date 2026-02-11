@@ -633,90 +633,214 @@ header {
     color: #888;
 }
 
-/* Contact Form */
-.contact-container {
+/* Creative Bento Grid Contact */
+.contact-section {
+    padding: 100px 0 120px;
+    background: linear-gradient(180deg, var(--bg-light) 0%, #050505 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.bento-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.contact-info {
-    padding-right: 2rem;
+.bento-item {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(10px);
 }
 
-.contact-items {
-    margin-top: 3rem;
+.bento-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: #444;
+}
+
+.main-cta {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    /* Takes up entire left side */
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    justify-content: center;
+    background: radial-gradient(circle at top right, #1a1a1a 0%, #0d0d0d 100%);
 }
 
-.contact-items .item {
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(37, 211, 102, 0.1);
+    color: #25d366;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: #e5e5e5;
+    margin-bottom: 2rem;
+    width: fit-content;
+    border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.bento-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.bento-text {
+    font-size: 1.1rem;
+    color: #888;
+    max-width: 450px;
+    line-height: 1.6;
+}
+
+/* Right Side Boxes */
+.whatsapp-box,
+.email-box {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.2rem;
+    justify-content: space-between;
     text-decoration: none;
-    transition: var(--transition);
+    cursor: pointer;
+    background: rgba(26, 26, 26, 0.8);
 }
 
-.contact-items .contact-link:hover {
-    color: var(--primary-color);
+.whatsapp-box:hover {
+    background: #0d2e18;
+    /* Very dark green tint */
+    border-color: #1e5c30;
 }
 
-.contact-items i {
-    color: var(--primary-color);
+.email-box:hover {
+    background: #2e0d0d;
+    /* Very dark red tint */
+    border-color: #5c1e1e;
+}
+
+.icon-holder {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
 }
 
-.contact-form-wrapper {
-    background: var(--secondary-color);
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid #222;
+.whatsapp-box .icon-holder {
+    color: #25d366;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
+.email-box .icon-holder {
+    color: var(--primary-color);
 }
 
-.form-group label {
-    font-weight: 600;
-    color: #e5e5e5;
-    font-size: 0.95rem;
-    display: block;
-    margin-bottom: 0.5rem;
+.bento-item:hover .icon-holder {
+    transform: scale(1.1) rotate(5deg);
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 16px;
-    background-color: #0F0F0F;
-    border: 2px solid #333;
+.box-text {
+    flex: 1;
+    margin-left: 1.5rem;
+    text-align: left;
+}
+
+.box-text h3 {
+    font-size: 1.25rem;
     color: #fff;
-    border-radius: 6px;
-    font-weight: 500;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition);
+    margin-bottom: 0.25rem;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    background-color: #000;
-    border-color: var(--primary-color);
-    box-shadow: none;
-    outline: none;
+.box-text p {
+    color: #666;
+    font-size: 0.9rem;
 }
 
-.form-group textarea {
-    height: 120px;
-    resize: vertical;
+.arrow-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.bento-item:hover .arrow-icon {
+    background: #fff;
+    color: #000;
+    transform: translateX(5px);
+}
+
+/* Responsive Bento */
+@media (max-width: 850px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .main-cta {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        text-align: center;
+        align-items: center;
+        padding: 3rem 1.5rem;
+    }
+
+    .bento-title {
+        font-size: 2.5rem;
+    }
+
+    .status-badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Footer */
