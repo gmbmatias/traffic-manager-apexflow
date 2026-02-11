@@ -445,6 +445,11 @@ header {
     position: relative;
 }
 
+.hero-main-visual,
+.hero-text-wrapper {
+    transition: transform 0.2s ease-out;
+}
+
 .hero-main-visual {
     position: relative;
     width: 100%;
