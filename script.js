@@ -1,3 +1,4 @@
+// Keep existing code...
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -10,19 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = mobileMenuOverlay.classList.contains('active') ? 'hidden' : '';
     }
 
-    mobileMenuBtn.addEventListener('click', toggleMenu);
-    closeMenuBtn.addEventListener('click', toggleMenu);
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
 
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', toggleMenu);
-    });
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
 
-    // Close menu when clicking outside
-    mobileMenuOverlay.addEventListener('click', (e) => {
-        if (e.target === mobileMenuOverlay) {
-            toggleMenu();
-        }
-    });
+        // Close menu when clicking outside
+        mobileMenuOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileMenuOverlay) {
+                toggleMenu();
+            }
+        });
+    }
 
     // Header Scroll Effect - Dark Theme
     const header = document.querySelector('header');
@@ -63,7 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Form Submission
+    // Testimonials Carousel - handled by CSS
+    // JS removed as requested for CSS-only infinite scroll
+
+    // Form Submission (Updated for removed form, keeping just incase user adds it back or other forms exist)
     const contactForm = document.querySelector('.contact-form');
 
     if (contactForm) {

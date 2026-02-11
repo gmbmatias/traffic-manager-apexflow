@@ -506,29 +506,96 @@ header {
 }
 
 /* Testimonials */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* Force 2 columns side by side */
-    gap: 1.5rem;
-    margin-top: 2rem;
-    max-width: 900px;
-    /* Constrain width to prevent huge bars */
-    margin-left: auto;
-    margin-right: auto;
+/* Testimonials Slider - Infinite Scroll */
+.testimonials-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0 3rem;
+    max-width: 100%;
+    /* Allow full width */
+    margin: 0 auto;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    /* Pause on hover optional - user asked for automatic */
+}
+
+/* Optional: Pause on hover if user wants to read */
+.testimonials-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Move by half the width (since we duplicated content) */
+        /* We need to calculate this roughly. 
+           5 cards * (350px + 2rem gap) = 5 * (350 + 32) = 1910px 
+           Let's use percentage if possible or calc. 
+           Since width is dynamic, translateX(-50%) of the TRACK width works if the track contains exactly 2 sets.
+        */
+        transform: translateX(-50%);
+    }
+}
+
+/* Float Animation */
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 .testimonial-card {
+    min-width: 350px;
+    max-width: 350px;
     background: var(--secondary-color);
-    padding: 1rem;
-    /* Minimum padding */
-    border-radius: 6px;
+    padding: 2rem;
+    border-radius: 8px;
     box-shadow: var(--shadow-md);
     position: relative;
     border: 1px solid #222;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-shrink: 0;
+    user-select: none;
+    transition: all 0.3s ease;
+
+    /* Animation applied here */
+    animation: floatY 6s ease-in-out infinite;
+}
+
+/* Stagger indices for wave effect */
+.testimonial-card:nth-child(odd) {
+    animation-duration: 7s;
+    animation-delay: 0.5s;
+}
+
+.testimonial-card:nth-child(2n) {
+    animation-duration: 5s;
+    background-color: #111;
+    /* Slightly darker shift for visual variety */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
 }
 
 .quote-icon {
